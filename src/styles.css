@@ -1,0 +1,22 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.accessOriginUrls {
+  display: grid;
+  justify-content: center;
+  gap: 10px 20px;
+}
+
+.accessOriginUrl {
+  display: flex;
+  justify-content: left;
+  gap: 10px 10px;
+}
+
+.accessOriginUrl textarea,
+button {
+  vertical-align: middle;
+  position: relative;
+}
