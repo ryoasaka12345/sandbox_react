@@ -5,7 +5,6 @@ export default function App() {
   const [items, setItems] = useState(null);
 
   const addUrlTextarea = () => {
-    console.log("addUrlTextarea");
     if (!items) {
       setItems([0]);
     } else {
@@ -14,7 +13,6 @@ export default function App() {
   };
 
   const popUrlTextarea = () => {
-    console.log("popUrlTextarea");
     if (!!items) {
       if (items.length <= 1) {
         setItems(null);
@@ -29,7 +27,7 @@ export default function App() {
       <div className="accessOriginUrls">
         {items ? (
           items?.map((key) => (
-            <div className="accessOriginUrl">
+            <div className="accessOriginUrl" key={String(key)}>
               <textarea></textarea>
               <button onClick={addUrlTextarea}>+</button>
               <button onClick={popUrlTextarea}>-</button>
